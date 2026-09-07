@@ -1,10 +1,11 @@
 fastapi
 uvicorn[standard]
-pydantic
-joblib
-shap
-scikit-learn
 pandas
 numpy
+scikit-learn
+joblib
+shap
 mysql-connector-python
 python-dotenv
+python-multipart
+
