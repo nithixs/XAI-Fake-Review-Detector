@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# React
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Dataset - training deployment-ku thevai illa
+ai_model/dataset/
+
+# Generated files
+ai_model/shap_explanation.png
