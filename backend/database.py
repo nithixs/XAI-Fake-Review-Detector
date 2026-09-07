@@ -10,7 +10,6 @@ PROJECT_ROOT = os.path.dirname(
 
 load_dotenv(
     os.path.join(PROJECT_ROOT, ".env"),
-    override=True
 )
 
 DB_CONFIG = {
@@ -187,3 +186,24 @@ def get_dashboard_stats():
             2
         )
     }
+
+def create_tables():
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS review_history (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            review TEXT NOT NULL,
+            prediction VARCHAR(50) NOT NULL,
+            confidence DECIMAL(5,2) NOT NULL,
+            fake_probability DECIMAL(5,2) NOT NULL,
+            genuine_probability DECIMAL(5,2) NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    connection.commit()
+
+    cursor.close()
+    connection.close()
