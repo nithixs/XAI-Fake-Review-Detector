@@ -1,1 +1,10 @@
-# Add project dependencies here.
+fastapi
+uvicorn[standard]
+pydantic
+joblib
+shap
+scikit-learn
+pandas
+numpy
+mysql-connector-python
+python-dotenv
