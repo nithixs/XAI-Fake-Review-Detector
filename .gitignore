@@ -19,3 +19,13 @@ ai_model/dataset/
 
 # Generated files
 ai_model/shap_explanation.png
+
+# Local data and generated demo/test files
+.venv/
+database/*.db
+database/*.db-*
+database/*.sqlite*
+.pytest_cache/
+*.log
+artifacts/
+submission/

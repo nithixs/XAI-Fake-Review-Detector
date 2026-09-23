@@ -1,0 +1,27 @@
+# Only send application inputs to the remote container builder.
+**
+!Dockerfile
+!requirements-lock.txt
+!backend/
+!backend/**
+!ai_model/
+!ai_model/saved_model/
+!ai_model/saved_model/**
+!frontend/
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/index.html
+!frontend/vite.config.js
+!frontend/src/
+!frontend/src/**
+!frontend/public/
+!frontend/public/**
+**/__pycache__/**
+**/*.pyc
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.db
+**/*.sqlite*
+**/*.log

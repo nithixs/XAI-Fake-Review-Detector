@@ -1,0 +1,130 @@
+{
+  "accuracy": 0.9384672526928315,
+  "precision": 0.9505606523955148,
+  "recall": 0.9248698239523928,
+  "f1": 0.9375392735955762,
+  "roc_auc": 0.9847123005726987,
+  "confusion_matrix": [
+    [
+      3850,
+      194
+    ],
+    [
+      303,
+      3730
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "Original (OR)",
+    "Computer-generated (CG)"
+  ],
+  "classification_report": {
+    "Original (OR)": {
+      "precision": 0.9270406934745967,
+      "recall": 0.9520276953511375,
+      "f1-score": 0.9393680614859095,
+      "support": 4044.0
+    },
+    "Computer-generated (CG)": {
+      "precision": 0.9505606523955148,
+      "recall": 0.9248698239523928,
+      "f1-score": 0.9375392735955762,
+      "support": 4033.0
+    },
+    "accuracy": 0.9384672526928315,
+    "macro avg": {
+      "precision": 0.9388006729350558,
+      "recall": 0.9384487596517652,
+      "f1-score": 0.9384536675407429,
+      "support": 8077.0
+    },
+    "weighted avg": {
+      "precision": 0.9387846571155603,
+      "recall": 0.9384672526928315,
+      "f1-score": 0.938454912846351,
+      "support": 8077.0
+    }
+  },
+  "test_size": 8077,
+  "positive_class": "Computer-generated (CG), label 1",
+  "evaluated_at": "2026-09-22T06:47:03.945688+00:00",
+  "protocol": "Reconstructed original seed-42 stratified 80/20 split; excluded held-out text overlapping training and deduplicated the remaining holdout. No artifacts retrained.",
+  "provenance_status": "Saved vocabulary matches and IDF/SHAP background match the reconstructed training partition within 1e-12 numerical tolerance; the original model has no signed training manifest.",
+  "seed": 42,
+  "train_size": 32345,
+  "original_test_size": 8087,
+  "dataset_rows": 40432,
+  "dataset_sha256": "ea03422988824bc917b5f7217e3867e27b597c647d5261adfae73cd7a85e1e1a",
+  "model_sha256": "b3c72b593a925dab6afd1bb4f77b96b622232075cbad67cd4645cc53a12a51c6",
+  "vectorizer_sha256": "ffc9e7ffdce0d98ab9b8cbff98020fab2904f3488a3d04576f5b048b4e24a734",
+  "sklearn_version": "1.9.0",
+  "artifact_verification": {
+    "vocabulary_matches_reconstructed_training": true,
+    "idf_matches_reconstructed_training": true,
+    "shap_background_matches_training_prefix": true
+  },
+  "background_max_absolute_error": 1.3877787807814457e-16,
+  "audit": {
+    "normalized_duplicate_rows_in_dataset": 27,
+    "test_rows_overlapping_training_excluded": 10,
+    "repeated_test_rows_excluded": 0
+  },
+  "train_test_text_overlap": 0,
+  "legacy_split_metrics": {
+    "accuracy": 0.9385433411648324,
+    "precision": 0.9506863243518048,
+    "recall": 0.9250556517437546,
+    "f1": 0.9376958756424721,
+    "roc_auc": 0.9847419175612903,
+    "confusion_matrix": [
+      [
+        3850,
+        194
+      ],
+      [
+        303,
+        3740
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Original (OR)",
+      "Computer-generated (CG)"
+    ],
+    "classification_report": {
+      "Original (OR)": {
+        "precision": 0.9270406934745967,
+        "recall": 0.9520276953511375,
+        "f1-score": 0.9393680614859095,
+        "support": 4044.0
+      },
+      "Computer-generated (CG)": {
+        "precision": 0.9506863243518048,
+        "recall": 0.9250556517437546,
+        "f1-score": 0.9376958756424721,
+        "support": 4043.0
+      },
+      "accuracy": 0.9385433411648324,
+      "macro avg": {
+        "precision": 0.9388635089132007,
+        "recall": 0.9385416735474461,
+        "f1-score": 0.9385319685641909,
+        "support": 8087.0
+      },
+      "weighted avg": {
+        "precision": 0.938862046960012,
+        "recall": 0.9385433411648324,
+        "f1-score": 0.9385320719514694,
+        "support": 8087.0
+      }
+    },
+    "test_size": 8087,
+    "positive_class": "Computer-generated (CG), label 1"
+  },
+  "limitations": [
+    "This is a reconstructed internal holdout, not an independently collected external test set.",
+    "Original training provenance has no persisted split manifest; checks establish matching preprocessing and background, not a proof of every historical training operation.",
+    "Normalized duplicate removal does not detect paraphrases or related customer/product leakage.",
+    "Labels mean original versus computer-generated text, not confirmed fraudulent purchases.",
+    "No independent probability calibration. Dataset external source and license are unverified."
+  ]
+}
